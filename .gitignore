@@ -12,6 +12,9 @@ src_managed/
 project/boot/
 project/plugins/project/
 
+.idea/
+atlassian-ide-plugin.xml
+
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
