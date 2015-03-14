@@ -75,9 +75,17 @@ object hail extends Build {
         "com.typesafe.akka" %% "akka-actor" % akkaVersion,
         "joda-time" % "joda-time" % "2.3",
         "org.joda" % "joda-convert" % "1.6",
+        "com.jcabi" % "jcabi-aether" % "0.10.1",
+        "org.apache.maven" % "maven-core" % "3.0.5",
         "com.typesafe.play" %% "play-json" % playVersion,
         "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test"
       )
     )
 
+
+  lazy val api = Project(
+    id = "hail-api",
+    base = file("api"),
+    settings = Defaults.coreDefaultSettings ++ sharedSettings
+  )
 }
